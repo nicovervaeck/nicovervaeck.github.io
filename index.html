@@ -3,55 +3,50 @@
 <head>
     <script type="application/ld+json">
         {
-            "@context": ["https://schema.org", {
-               "age": "http://xmlns.com/foaf/0.1/age",
-               "Person": "http://xmlns.com/foaf/0.1/Person",
-               "name": "http://xmlns.com/foaf/0.1/name",
-               "xsd": "http://www.w3.org/2001/XMLSchema#",
-               "participantInCourse": {
-                    "@id": "https://example.org/participantInCourse",
-                    "@type": "@id"
-               },
-               "knows": {
-                  "@id":"http://xmlns.com/foaf/0.1/knows", 
-                  "@type": "@id"
-               },
-              "gender": "http://xmlns.com/foaf/0.1/gender",
-              "address": "https://example.org/address",
-              "organisation": {
-                "@id": "http://xmlns.com/foaf/0.1/Organisation",
-                "@type": "@id"
+            "@context": {
+                    "schema": "https://schema.org/",
+                         "foaf": "http://xmlns.com/foaf/0.1/",
+                         "xsd": "http://www.w3.org/2001/XMLSchema#",
+                    "rov": "http://www.w3.org/ns/regorg#",
+                         "participatesInCourse": {
+                              "@id": "schema:Course",
+                              "@type": "@id"
+                         },
+                  },
+           "@id": "https://nicovervaeck.github.io/#me",
+              "@type": "foaf:Person",
+              "foaf:name": "Nicolas Vervaeck",
+              "foaf:age": 43,
+              "schema:gender": {
+                  "@id": "schema:Male",
+                        "@type": "@id"
               },
-              "jobTitle": {
-                "@id": "https://example.org/jobTitle",
-                "@language": "en"
-              }
-            }],
-            "@id": "https://nicovervaeck.github.io/#me",
-            "@type": "Person",
-            "name": "Nicolas Vervaeck",
-            "age": 43,
-            "gender": "Male",
-            "address": "Bijenstraat 42, 8792 Desselgem",
-            "organisation": "https://bosa.belgium.be",
-            "function": "Enterprise Architect",
-            
-            "participatesInCourse": "https://www.ugain.ugent.be/MCKG2024.htm",
-            "knows": [
+              "schema:address": {"@id": "https://data.vlaanderen.be/id/adres/653189"},
+          "schema:worksFor": {
+              "@id": "https://www.bosa.belgium.be/#OrgID"
+              "@type": "schema:Organisation"
+              "schema:legalName": [{
+                       "@value": "Federale Overheidsdienst Beleid en Ondersteuning",
+                       "@language": "nl"
+                },
               {
-                "@id": "http://example.com/otherStudent1",
-                "@type": "Person",
-                "participatesInCourse": "https://www.ugain.ugent.be/MCKG2024.htm"
-              },
-               
+                  "@value": "Service Public Fédéral Stratégie et Appui",
+                       "@language": "fr"
+                },
               {
-                "@id": "http://example.com/otherStudent2",
-                "@type": "Person",
-                "participatesInCourse": "https://www.ugain.ugent.be/MCKG2024.htm"
-              }
+                  "@value": "Föderaler Öffentlichter Dienst Politik und Unterstützung",
+                       "@language": "de"
+                }],
+              "schema:alternateName": "BOSA",
+              "rov:RegisteredOrganization": "https://kbopub.economie.fgov.be/kbopub/toonondernemingps.html?ondernemingsnummer=671516647",
+              "schema:url": "https://www.bosa.belgium.be"
+          },
+            "schema:jobTitle": "Enterprise Architect"@en,
+            "participatesInCourse": "https://pietercolpaert.be/teaching/kg/#2023-2024",
+            "knows": ["https://colada.be/#me",
+                        "https://jensdesutter.github.io/#me"
              ]
-          }
-          
+      }
     </script>
 </head>
 <body>
