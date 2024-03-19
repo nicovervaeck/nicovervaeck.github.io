@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/turtle" id="photoOntology">
+        {
+            @prefix nvu: <https://nicovervaeck.github.io/myUniverse#> .
+            @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+            @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+            @prefix owl: <http://www.w3.org/2002/07/owl#> .
+            @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+            @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+            
+            <https://nicovervaeck.github.io/myUniverse#photoOntology> a owl:Ontology .
+            
+            nvu:Photo a owl:Class;
+                       rdfs:label "photo"@en, "foto"@nl, "photo"@fr;
+                rdfs:comment "Class of photos"@en .
+            
+            nvu:title a rdfs:Property;
+                rdfs:label "title"@en, "titel"@nl, "titre"@fr;
+                rdfs:comment "Title or name of the photo"@en;
+                rdfs:domain nvu:Photo;
+                rdfs:range rdfs:Literal .
+            
+            nvu:depictedPerson a rdfs:Property;
+                rdfs:label "depicted person"@en, "afgebeelde persoon"@nl, "personne représentée"@fr;
+                rdfs:comment "person depicted in the photo"@en;
+                rdfs:domain nvu:Photo;
+                rdfs:range foaf:Person .
+            
+            nvu:appearsInPhoto a rdfs:Property;
+                rdfs:label "appears in photo"@en, "is afgebeeld in foto"@nl, "représenté dans la photo"@fr;
+                rdfs:comment "photo in which the subject appears"@en;
+                owl:inverseOf nvu:depictedPerson;
+            
+            nvu:description a owl:DatatypeProperty;
+                rdfs:label "description"@en, "omschrijving"@nl, "description"@fr;
+                rdfs:domain nvu:Photo;
+                rdfs:range rdfs:langString .
+                
+            
+            nvu:creationDate a owl:DatatypeProperty;
+                rdfs:label "creation date"@en, "datum van creatie"@nl, "date de création"@fr;
+                rdfs:comment "date the photo was created"@en;
+                rdfs:domain nvu:Photo;
+                rdfs:range xsd:dateTime .
+      }
+    </script>
+</head>
+<body>
+<h1>Hello World</h1>
+<p>This is my universe.</p>
+</body>
+</html>
