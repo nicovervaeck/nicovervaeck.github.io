@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>My Photographs</title>
+   <script type="text/turtle" id="myPhotos">
+    @base <https://nicovervaeck.github.io/myUniverse/> .
+    @context nvu: <https://nicovervaeck.github.io/myUniverse/#> .
+
+    <IMG_1435.JPG> a nvu:Photo ;
+        nvu:title "My picture"@en;
+        nvu:description "Nice picture of me, with background out of focus"@en;
+        nvu:depictedPerson <https://nicovervaeck.github.io/#me>;
+        nvu:creationDate "2019-07-29T09:02:05" .
+    
+    <PHOTO-2023-11-23-19-11-06.JPG> a nvu:Photo ;
+        nvu:title "City trip picture"@en;
+        nvu:description "Nice picture of me, eating paella at the beach in Alicante"@en;
+        nvu:depictedPerson <https://nicovervaeck.github.io/#me>;
+        nvu:creationDate "2023-11-23T19:11:06" .
+   </script>
+</head>
+<body>
+<h1>My favourite photographs</h1>
+<h2>Photo 1</h2>
+<img src="./IMG_1435.JPG"/>
+<h2>Photo 2</h2>
+<img src="./PHOTO-2023-11-23-19-11-06.jpg"/>
+</body>
+</html>
