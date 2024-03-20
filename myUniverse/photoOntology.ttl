@@ -45,8 +45,8 @@ nvo:location a rdfs:Propertty;
     rdfs:domain nvo:Photo;
     rdfs:range <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
 
-nvo:photographer a rdfs:Property;
-rdfs:label "photographer"@en, "fotograaf"@nl, "photographe"@fr;
-rdfs:comment "person that took the photo"@en;
-rdfs:domain nvo:Photo;
-rdfs:range foaf:Person .
+nvo:photographer a rdfs:Property,owl:FunctionalProperty;
+    rdfs:label "photographer"@en, "fotograaf"@nl, "photographe"@fr;
+    rdfs:comment "person that took the photo"@en;
+    rdfs:domain nvo:Photo;
+    rdfs:range foaf:Person .
