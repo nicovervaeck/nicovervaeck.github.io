@@ -1,7 +1,7 @@
 @prefix nvp: <https://nicovervaeck.github.io/myUniverse/myPhotos.ttl#> .
 @prefix nvo: <https://nicovervaeck.github.io/myUniverse/photoOntology.ttl#> .
 @prefix wd: <https://wikidata.org/entity/> .
-@prefix owl: 
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 
 nvp:Photo1 a nvo:Photo ;
     nvo:title "My picture"@en;
