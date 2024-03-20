@@ -1,0 +1,12 @@
+@prefix nvo: <https://nicovervaeck.github.io/myUniverse/photoOntology.ttl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+nvo:Photo rdfs:subClassOf foaf:Image .
+nvo:title rdfs:subPropertyOf foaf:name .
+nvo:depictedPerson rdfs:subPropertyOf foaf:depicts .
+nvo:appearsInPhoto rdfs:subPropertyOf foaf:depiction .
+nvo:location rdfs:subPropertyOf foaf:based_near .
+nvo:photographer rdfs:subPropertyOf foaf:maker .
