@@ -1,0 +1,20 @@
+@prefix nvp: <https://nicovervaeck.github.io/myUniverse/myPhotos.ttl#> .
+@prefix nvo: <https://nicovervaeck.github.io/myUniverse/photoOntology.ttl#>
+@prefix wd: <https://wikidata.org/entity/> .
+@prefix owl: 
+
+nvp:Photo1 a nvo:Photo ;
+    nvo:title "My picture"@en;
+    owl:sameAs <https://nicovervaeck.github.io/myUniverse/IMG_1435.JPG>;
+    nvo:description "Nice picture of me, with background out of focus"@en;
+        nvo:depictedPerson <https://nicovervaeck.github.io/#me>;
+        nvo:location wd:Q204547;
+        nvo:creationDate "2019-07-29T09:02:05" .
+    
+nvp:Photo2 a nvo:Photo ;
+    nvo:title "City trip picture"@en;
+    owl:sameAs <https://nicovervaeck.github.io/myUniverse/PHOTO-2023-11-23-19-11-06.jpg>;
+    nvo:description "Picture of me having paella at the beach in Alicante"@en;
+    nvo:depictedPerson <https://nicovervaeck.github.io/#me>;
+    nvo:location wd:Q11959;
+    nvo:creationDate "2023-11-23T19:11:06" .
